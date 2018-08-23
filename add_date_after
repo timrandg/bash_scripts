@@ -1,0 +1,8 @@
+#!/bin/bash
+file_date=$(date "+%Y-%m-%d")
+
+
+filename=$1
+base_name="${filename%.*}"
+ext="${filename##*.}"
+cp $filename "$base_name"'_'"$file_date"'.'"$ext"
